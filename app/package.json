@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r dotenv/config app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/a-stanisz/ifc-flow-system/issues"
   },
-  "homepage": "https://github.com/a-stanisz/ifc-flow-system#readme"
+  "homepage": "https://github.com/a-stanisz/ifc-flow-system#readme",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.1",
+    "sequelize": "^6.7.0"
+  }
 }
