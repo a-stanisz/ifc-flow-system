@@ -1,5 +1,7 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const { Sequelize } = require('sequelize');
 
 const app = express();
 
@@ -14,10 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const db = require('./db/db');
-db.Sequelize.afterSync();
+db.afterSync();
 
 app.get('/', (req, res) => {
-  res.send('Hello ciuluu!');
+  res.send('Hello!');
 });
 
 const PORT = process.env.NODE_DOCKER_PORT || 8080;
